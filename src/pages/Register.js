@@ -79,7 +79,7 @@ const Register = () => {
   const handleClick = (e) => {
     e.preventDefault();
     register(dispatch, { ...values });
-    navigate('/login');
+    navigate('/sign-in');
   }
 
   useEffect(() => {
@@ -130,7 +130,7 @@ const Register = () => {
             </div>
             <div className="auth-form-misc">
               <p>
-                Returning user?&nbsp;<a href="/login">Login</a>
+                Returning user?&nbsp;<a href="/sign-in">Login</a>
               </p>
             </div>
           </div>

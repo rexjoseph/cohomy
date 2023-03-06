@@ -1,7 +1,6 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import WanderJoshua from "../media/landing-hero-wander-joshua-tree.webm";
-import AshevilleMeadows from "../media/landing-hero-wander-asheville-meadows.webm"
 
 const Homepage = styled.div``;
 
@@ -287,6 +286,18 @@ const Paragraph = styled.p`
 `
 
 const Slider = () => {
+  const [users, setUsers] = useState([]);
+  
+  useEffect(() => {
+    const getUsers = async () => {
+      try {
+        const res = await axios.get('http://localhost:5000/api/index/all-users-count');
+        setUsers(res.data);
+      } catch (err) {}
+    };
+    getUsers()
+  }, [])
+
   return (
     <Homepage>
       <Hero>
@@ -352,55 +363,43 @@ const Slider = () => {
           </Asset> */}
           <AssetVideo>
             <VideoHolder>
-              <video style={{objectFit: "cover", maxWidth: "100%"}} src={AshevilleMeadows} crossOrigin="anonymous" width="100%" height="100%" muted playsInline loop autoPlay />
+              <video style={{objectFit: "cover", maxWidth: "100%"}} src='https://hashingmartimages.mo.cloudinary.net/images/g/landing-hero-wander-asheville-meadows.webm' crossOrigin="anonymous" width="100%" height="100%" muted playsInline loop autoPlay />
             </VideoHolder>
             <Header>
-              <Heading>Find your happy place.</Heading>
+              <Heading>Co-habit your happy place.</Heading>
               <SubHeading>
                 Share a home with inspiring views, dorm with modern workstations, and refreshing experiences. It's a shared space, but better.
               </SubHeading>
               <Action>
-                <LinkA>Get the experience</LinkA>
+                <LinkA href="/sign-up">Get the experience</LinkA>
               </Action>
               <Flex>
                 <JustifyCenter>
                   <SubHeadingUserCount>
                     <RelativeFlex>
                       <PhotosWrapper>
-                        <RoundPfp>
-                          <RoundPfpImage src="https://www.wander.com/_next/image?url=https%3A%2F%2Fwww.datocms-assets.com%2F53643%2F1652291699-fp8hbvxr_400x400.jpeg&w=32&q=75" />
-                        </RoundPfp>
-                        <RoundPfp>
-                          <RoundPfpImage src="https://www.wander.com/_next/image?url=https%3A%2F%2Fwww.datocms-assets.com%2F53643%2F1653407396-darryl-b.png&w=32&q=75" />
-                        </RoundPfp>
-                        <RoundPfp>
-                          <RoundPfpImage src="https://www.wander.com/_next/image?url=https%3A%2F%2Fwww.datocms-assets.com%2F53643%2F1652291124-judya.jpeg&w=32&q=75" />
-                        </RoundPfp>
-                        <RoundPfp>
-                          <RoundPfpImage src="https://www.wander.com/_next/image?url=https%3A%2F%2Fwww.datocms-assets.com%2F53643%2F1652291173-ftz3l5bo_400x400.jpeg&w=32&q=75" />
-                        </RoundPfp>
-                        <RoundPfp>
-                          <RoundPfpImage src="https://www.wander.com/_next/image?url=https%3A%2F%2Fwww.datocms-assets.com%2F53643%2F1653407295-novaks.png&w=32&q=75" />
-                        </RoundPfp>
-                        <RoundPfp>
-                          <RoundPfpImage src="https://www.wander.com/_next/image?url=https%3A%2F%2Fwww.datocms-assets.com%2F53643%2F1653407231-garrett.png&w=32&q=75" />
-                        </RoundPfp>
-                        <RoundPfp>
-                          <RoundPfpImage src="https://www.wander.com/_next/image?url=https%3A%2F%2Fwww.datocms-assets.com%2F53643%2F1653407093-joshkohn.jpeg&w=32&q=75" />
-                        </RoundPfp>
+                        {
+                          users?.slice(0, 7).map((user, index) => (
+                            <RoundPfp key={index}>
+                              <RoundPfpImage src={user.profile_photo} />
+                            </RoundPfp>
+                          ))
+                        }
                       </PhotosWrapper>
                       <PhotosWrapper1>
-                        <RoundPfp1>
-                          <RoundPfp1Image src="https://www.wander.com/_next/image?url=https%3A%2F%2Fwww.datocms-assets.com%2F53643%2F1652291699-fp8hbvxr_400x400.jpeg&w=32&q=75" />
-                        </RoundPfp1>
-                        <RoundPfp1>
-                          <RoundPfp1Image src="https://www.wander.com/_next/image?url=https%3A%2F%2Fwww.datocms-assets.com%2F53643%2F1653407396-darryl-b.png&w=32&q=75" />
-                        </RoundPfp1>
-                        <RoundPfp1>
-                          <RoundPfp1Image src="https://www.wander.com/_next/image?url=https%3A%2F%2Fwww.datocms-assets.com%2F53643%2F1652291124-judya.jpeg&w=32&q=75" />
-                        </RoundPfp1>
+                      {
+                          users?.slice(0, 3).map((user, index) => (
+                            <RoundPfp1 key={index}>
+                              <RoundPfp1Image src={user.profile_photo} />
+                            </RoundPfp1>
+                          ))
+                        }
                       </PhotosWrapper1>
-                      <Paragraph>Join 115 Cohomies and counting...</Paragraph>
+                      <Paragraph>
+                        {
+                          users.length === 1 ? <>Join {users.length} Cohomie and counting...</> : <>Join {users.length} Cohomies and counting...</>
+                        }
+                      </Paragraph>
                     </RelativeFlex>
                   </SubHeadingUserCount>
                 </JustifyCenter>

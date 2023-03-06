@@ -32,10 +32,10 @@ const Navbar = () => {
           <nav>
             <ul className="mobile-nav">
               <li>
-                <a href="#" id="link-logo" className="link-logo"></a>
+                <a href="/" id="link-logo" className="link-logo"></a>
               </li>
               <li>
-                <div onClick={showNavbar} className="menu-icon-container1">
+                <div onClick={showNavbar} className="menu-icon-container">
                   <div className="menu-icon">
                     <span className="line-1"></span>
                     <span className="line-2"></span>
@@ -62,7 +62,7 @@ const Navbar = () => {
                 {
                   currentUser ? (
                     <li>
-                      <a href="/profile">Rex</a>
+                      <a href="/profile">{currentUser.firstName}</a>
                     </li>
                   ) : (
                     <li>

@@ -70,7 +70,7 @@ const HomeNavbar = () => {
                 {
                   currentUser ? (
                     <li>
-                      <a href="/profile">Rex</a>
+                      <a href="/profile">{currentUser.firstName}</a>
                     </li>
                   ) : (
                     <li>
