@@ -47,7 +47,7 @@
 }
 
 :root {
-  --color-primary: #1D1D1F;
+  --color-primary: #1F1F1F;
   --color-grey: #808080;
   --color-green: #458808;
   --color-pending: #DDD;
@@ -64,6 +64,8 @@
   --marquee-direction: reverse;
   --marquee-play-state: running;
   --marquee-normal: normal;
+  /* --btn-linear-gradient: linear-gradient(to right,#E61E4D 0%,#E31C5F 50%,#D70466 100%); */
+  --btn-linear-gradient: linear-gradient(90deg, hsla(23, 41%, 9%, 1) 0%, hsla(0, 0%, 12%, 1) 100%);
 }
 
 * {

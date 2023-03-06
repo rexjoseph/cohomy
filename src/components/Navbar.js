@@ -1,10 +1,8 @@
-import React, { useLayoutEffect, useRef, useState } from "react";
+import React, { useLayoutEffect, useRef, useState } from 'react'
 import { useSelector } from "react-redux";
-import "./HomeNavbar.css";
-import LoginModal from "./LoginModal";
+import "./Navbar.css";
 
-const HomeNavbar = () => {
-  const [openModal, setOpenModal] = useState(false);
+const Navbar = () => {
   const currentUser = useSelector((state) => state.user.currentUser);
 
   const navRef = useRef();
@@ -14,10 +12,6 @@ const HomeNavbar = () => {
   const showNavbar = () => {
     navRef.current.classList.toggle("active");
   };
-
-  if (openModal) {
-    navRef.current.classList.remove("active");
-  }
   
   // useLayoutEffect to mutate the DOM
   useLayoutEffect(() => {
@@ -32,32 +26,30 @@ const HomeNavbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
     // remove the event
   }, []);
-
   return (
-    <>
-      <div className={`page-header ${scrolled}`}>
+    <div className={`page-header ${scrolled}`}>
         <div className="nav-container" ref={navRef}>
           <nav>
-            <ul className="mob-nav">
+            <ul className="mobile-nav">
               <li>
-                <a href="#" id="link-logo1" className="link-logo1"></a>
+                <a href="#" id="link-logo" className="link-logo"></a>
               </li>
               <li>
-                <div onClick={showNavbar} className="menu-icon1-container1">
-                  <div className="menu-icon1">
+                <div onClick={showNavbar} className="menu-icon-container1">
+                  <div className="menu-icon">
                     <span className="line-1"></span>
                     <span className="line-2"></span>
                   </div>
                 </div>
               </li>
             </ul>
-            <ul className="desk-nav">
-              <div className="desk-nav__flex1">
+            <ul className="desktop-nav">
+              <div className="desktop-nav__flex1">
                 <li>
-                  <a href="/" className="link-logo1"></a>
+                  <a href="/" className="link-logo"></a>
                 </li>
               </div>
-              <div className="desk-nav__flex2">
+              <div className="desktop-nav__flex2">
                 <li>
                   <a>Products</a>
                 </li>
@@ -92,9 +84,7 @@ const HomeNavbar = () => {
           </nav>
         </div>
       </div>
-      <LoginModal open={openModal} onClose={() => setOpenModal(false)} />
-    </>
-  );
-};
+  )
+}
 
-export default HomeNavbar;
+export default Navbar

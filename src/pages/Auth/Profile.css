@@ -1,0 +1,41 @@
+.user-profile-wrapper {
+  color: var(--color-primary);
+  margin: auto;
+  margin-top: 48px;
+  max-width: 1250px;
+  margin-bottom: 32px;
+}
+
+.user-profile-flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  width: 100%;
+}
+
+.user-join-date {
+  font-size: 12px;
+  line-height: 18px;
+  color: #717171;
+  margin-bottom: 8px;
+}
+
+.user-name-header {
+  color: inherit;
+  font-size: 3.2rem;
+  font-weight: 300;
+  font-weight: inherit;
+  line-height: inherit;
+  margin: 0px;
+  padding: 0px;
+}
+
+.logout-div button {
+  border: none;
+  outline: none;
+  color: inherit;
+  font-size: 1.3rem;
+  font-weight: 300;
+  background: none;
+  cursor: pointer;
+}

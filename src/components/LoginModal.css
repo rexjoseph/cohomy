@@ -1,0 +1,318 @@
+.overlay {
+  /* background: rgb(34, 34, 34) ; */
+  z-index: 2000 ;
+  position: fixed ;
+  inset: 0px ;
+  overflow-y: auto ;
+}
+
+.modal-container {
+  -webkit-box-pack: center ;
+  -webkit-box-align: end ;
+  -webkit-box-direction: normal ;
+  -webkit-box-orient: horizontal ;
+  z-index: 2000 ;
+  position: fixed ;
+  inset: 0px ;
+  max-height: calc(var(--vh, 1vh) * 100) ;
+  padding-top: calc(12px + env(safe-area-inset-top, 0)) ;
+  display: flex ;
+  flex-direction: row ;
+  align-items: flex-end ;
+  justify-content: center ;
+}
+
+.modal-container-inner1 {
+  display: contents ;
+}
+
+.modal-container-innerhide {
+  border: 0px ;
+  clip: rect(0 0 0 0) ;
+  -webkit-clip-path: inset(100%) ;
+  clip-path: inset(100%) ;
+  height: 1px ;
+  overflow: hidden ;
+  padding: 0px ;
+  position: absolute ;
+  white-space: nowrap ;
+  width: 1px ;
+  margin-top: -1px ;
+}
+
+.modal-inner-1 {
+  -webkit-box-direction: normal ;
+  -webkit-box-orient: vertical ;
+  background: rgb(255, 255, 255) ;
+  overflow: clip ;
+  position: relative ;
+  width: 100vw ;
+  max-width: 100vw ;
+  max-height: 100% ;
+  display: flex ;
+  flex-direction: column ;
+  box-shadow: rgb(0 0 0 / 28%) 0px 8px 28px ;
+  border-top-left-radius: 12px ;
+  border-top-right-radius: 12px ;
+}
+
+.close-div {
+  position: absolute ;
+  display: flex ;
+  top: 16px ;
+  left: 24px ;
+  z-index: 1 ;
+}
+
+.close-div span {
+  cursor: pointer;
+}
+
+.modal-inner-1 header {
+  -webkit-box-pack: justify ;
+  -webkit-box-align: center ;
+  display: flex ;
+  flex: 0 0 auto ;
+  align-items: center ;
+  justify-content: space-between ;
+  padding: 0px 24px ;
+  min-height: 48px ;
+  border-bottom: 1px solid rgb(235, 235, 235) ;
+  color: rgb(34, 34, 34) ;
+  font-size: 16px ;
+  line-height: 20px ;
+  font-weight: 800 ;
+}
+
+.header-left {
+  -webkit-box-flex: 0 ;
+  flex: 0 0 16px ;
+  text-align: left ;
+}
+
+.header-right {
+  -webkit-box-flex: 0 ;
+  flex: 0 0 16px ;
+  text-align: right ;
+}
+
+.header-center {
+  -webkit-box-flex: 0 ;
+  overflow: hidden ;
+  flex: 0 1 auto ;
+  text-align: center ;
+  margin-left: 16px ;
+  margin-right: 16px ;
+}
+
+.header-center h1 {
+  color: inherit ;
+  font-size: 1em ;
+  font-weight: inherit ;
+  line-height: inherit ;
+  margin: 0px ;
+  padding: 0px ;
+}
+
+.header-center-h1div {
+  overflow: hidden ;
+  text-overflow: ellipsis ;
+}
+
+.modal-content-wrapper {
+  padding: 24px ;
+  flex: 1 1 auto ;
+  overflow-y: auto ;
+  outline: none ;
+}
+
+.login-pane-div1 {
+  margin-top: 8px ;
+  margin-bottom: 24px ;
+}
+
+.login-pane-div1 h3 {
+  font-size: 20px ;
+  line-height: 26px ;
+  color: rgb(34, 34, 34) ;
+  font-weight: 500 ;
+  margin-bottom: 8px ;
+}
+
+.login-form-div {
+  position: relative ;
+  cursor: text ;
+  display: flex ;
+  min-height: 56px ;
+  width: 100% ;
+  margin: 20px 0 ;
+  border: none ;
+  border-radius: 8px ;
+  font-family: inherit ;
+  font-size: 16px ;
+  line-height: 20px ;
+  font-weight: 400 ;
+  color: #000 ;
+  /* box-shadow: inset 0 0 0 1px #c13515 ;
+    background-color: #fff8f6 ; */
+  box-shadow: inset 0 0 0 1px #f7f7f7 ;
+  background-color: #fff ;
+}
+
+.login-form-div label {
+  position: relative ;
+  flex: 1 1 0% ;
+  padding: 0px ;
+}
+
+.login-label-1 {
+  position: absolute ;
+  top: 18px ;
+  left: 12px ;
+  right: 12px ;
+  margin: 0px ;
+  padding: 0px ;
+  pointer-events: none ;
+  transform-origin: 0% 0% ;
+  font-family: inherit;
+  font-size: 16px ;
+  line-height: 20px ;
+  transition: -ms-transform 0.15s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0s,
+    -webkit-transform 0.15s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0s,
+    transform 0.15s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0s ;
+  width: calc(133.333% - 32px) ;
+  transform: translateY(-8px) scale(0.75) ;
+  color: #1f1f1f ;
+  font-weight: 500 ;
+}
+
+.login-label-1-content {
+  max-width: 100% ;
+  overflow: hidden ;
+  text-overflow: ellipsis ;
+  white-space: nowrap ;
+}
+
+.login-label-1-inputdiv {
+  display: flex ;
+  opacity: 1 ;
+}
+
+.login-label-1-inputdiv input {
+  width: 100% ;
+  border: none ;
+  outline: none ;
+  padding: 0px ;
+  margin: 26px 12px 6px ;
+  min-height: 1px ;
+  color: inherit ;
+  background-color: transparent ;
+  font-family: inherit ;
+  font-size: 14px ;
+  font-weight: 300 ;
+  line-height: inherit ;
+  appearance: none ;
+}
+
+.login-button {
+  margin-top: 16px ;
+  margin-bottom: 24px ;
+}
+
+.login-button button {
+  border-radius: 8px;
+  border-width: 1px;
+  border-style: solid;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  padding-left: 24px;
+  padding-right: 24px;
+  transition: box-shadow 0.2s ease, transform 0.1s ease;
+  border: none;
+  background: var(--btn-linear-gradient);
+  cursor: pointer;
+  margin: 0;
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+  color: var(--color-secondary);
+  outline: none;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  width: 100%;
+}
+
+.auth-form-divider {
+  width: 100%;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.auth-form-divider-div {
+  -webkit-box-align: center;
+  display: flex;
+  align-items: center;
+  margin: 16px 0px;
+  font-weight: 400 !important;
+  font-size: 12px !important;
+  line-height: 16px !important;
+}
+
+.auth-form-divider-div::before {
+  content: "" !important;
+  display: block !important;
+  width: 100% !important;
+  height: 1px !important;
+  background-color: rgb(221, 221, 221) !important;
+  margin-right: 16px !important;
+}
+
+.auth-form-divider-div::after {
+  content: "" !important;
+  display: block !important;
+  width: 100% !important;
+  height: 1px !important;
+  background-color: rgb(221, 221, 221) !important;
+  margin-left: 16px !important;
+}
+
+.auth-form-misc { 
+  text-align: center;
+}
+
+.auth-form-misc a {
+  cursor: pointer;
+}
+
+.auth-form-misc a:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 744px) and (min-height: 475px) {
+  .modal-container {
+    -webkit-box-align: center ;
+    padding: 40px ;
+    align-items: center ;
+  }
+
+  .modal-inner-1 {
+    width: 100% ;
+    max-width: 568px ;
+    border-radius: 12px ;
+  }
+
+  .close-div {
+    top: 24px ;
+  }
+
+  .modal-inner-1 header {
+    min-height: 64px ;
+  }
+}

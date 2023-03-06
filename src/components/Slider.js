@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import WanderJoshua from "../media/landing-hero-wander-joshua-tree.webm";
+import AshevilleMeadows from "../media/landing-hero-wander-asheville-meadows.webm"
 
 const Homepage = styled.div``;
 
@@ -11,7 +13,7 @@ const Hero = styled.div`
   width: 100%;
 
   @media (max-width: 550px) {
-    height: 80vh;
+    height: 100vh;
     // display: none;
   }
 `;
@@ -29,6 +31,25 @@ const Layout = styled.div`
   }
 `;
 
+const AssetVideo = styled.div`
+  background-color: #000;
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+  object-position: top center;
+  position: relative;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+`
+
+const VideoHolder = styled.div`
+  height: calc(100% - 86px);
+  padding: 0;
+  margin: 0;
+  width: 100%;
+`
+
 const Asset = styled.div`
   background-color: #f1f1f1;
   height: 100%;
@@ -42,26 +63,7 @@ const Asset = styled.div`
   z-index: 2;
 `;
 
-const AssetVideo = styled.div`
-  background-color: #f1f1f1;
-  height: 100%;
-  left: 0;
-  object-fit: cover;
-  object-position: top center;
-  position: relative;
-  top: 0;
-  width: 100%;
-  z-index: 2;
-`;
-
 const Figure = styled.figure`
-  height: calc(100% - 86px);
-  padding: 0;
-  margin: 0;
-  width: 100%;
-`;
-
-const VideoHolder = styled.div`
   height: calc(100% - 86px);
   padding: 0;
   margin: 0;
@@ -146,7 +148,7 @@ const Action = styled.div`
   align-items: center;
   display: flex;
   justify-content: center;
-  margin-top: 24px;
+  margin: 24px 0;
   width: 100%;
   z-index: 2;
 `;
@@ -169,185 +171,242 @@ const LinkA = styled.a`
   line-height: 40px;
 
   &:hover {
-    background: var(--color-primary);
+    background: #000;
     color: #fff;
   }
 `;
 
-const MobileHero = styled.section`
+const Flex = styled.div`
+  display: flex;
+`
+
+const JustifyCenter = styled.div`
+  justify-content: center;
+  width: 100%;
+  display: flex;
+`
+
+const SubHeadingUserCount = styled.div`
+  position: relative;
+  letter-spacing: 0;
+  max-width: 460px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+
+  @media (min-width: 1024px) {
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 18px;
+    line-height: 28px;
+  }
+`
+
+const RelativeFlex = styled.div`
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+
+  @media (min-width: 768px) {
+    justify-content: flex-start;
+  }
+`
+
+const PhotosWrapper = styled.div`
+  position: relative;
+  top: 0;
   display: none;
-  position: relative;
-  width: 100%;
+  width: auto;
+  height: 24px;
 
-  @media (max-width: 550px) {
+  @media (min-width: 768px) {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-    width: 100%;
   }
-`;
+`
 
-const MobileHeroDiv = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  display: flex;
-  height: 100%;
-  justify-content: center;
-  width: 100%;
-`;
-
-const MobileHeroFigure = styled.figure`
-  margin: 0;
-  width: 100%;
-  height: 100%;
+const PhotosWrapper1 = styled.div`
   position: relative;
-`;
-
-const MobileHeroFigureAsset = styled.div`
-  padding-top: 100%;
-  background-color: #f1f1f1;
+  top: 0;
+  width: 56px;
+  min-width: 64px;
   display: flex;
+  
+  @media (min-width: 768px) {
+    display: none;
+  }
+`
+
+const RoundPfp = styled.div`
+  width: 24px;
+  height: 24px;
+  border-radius: 9999px;
   position: relative;
-  height: calc(100% - 36px);
-  padding: 0;
-  margin: 0;
-  width: 100%;
-`;
+`
 
-const MobileAssetVideo = styled.div`
-  padding-top: 100%;
-  background-color: #f1f1f1;
-  display: flex;
+const RoundPfp1 = styled.div`
+  width: 24px;
+  height: 24px;
+  border-radius: 9999px;
   position: relative;
-  height: calc(70vh - 50px);
-  padding: 0;
-  margin: 0;
-  width: 100%;
-`;
+`
 
-const MobileHeroAssetImageDiv = styled.div`
-  width: 100%;
-  object-position: center;
-`;
-
-const MobileAssetVideoHolder = styled.div`
-  width: 100%;
-`;
-
-const MobileHeroAssetImage = styled.img`
-  height: 100%;
-  object-fit: cover;
-  object-position: top center;
-  width: 100%;
-  border: 0;
+const RoundPfp1Image = styled.img`
   max-width: 100%;
-  vertical-align: middle;
-  aspect-ratio: 800 / 800;
-`;
+  height: auto;
+  border-radius: 9999px;
+`
 
-const MobileHeroHeader = styled.header`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 24px auto;
-  height: 100%;
-  width: 100%;
+const RoundPfpImage = styled.img`
+  max-width: 100%;
+  height: auto;
+  border-radius: 9999px;
+`
 
-  @media (max-width: 550px) {
-    margin: 12px 0 0;
-    padding: 0 12px;
-    height: auto;
-  }
-`;
-
-const MobileHeroHeaderDiv = styled.div`
-  bottom: 108px;
-  display: inline-flex;
-  flex-direction: column;
-  padding: 0;
-  position: sticky;
-  width: 100%;
-  z-index: 2;
-  align-items: center;
-  margin: 24px auto;
-`;
-
-const MobileHeroH1 = styled.h1`
-  font-size: 36px;
-  letter-spacing: -1.6px;
-  line-height: 1.08;
-  text-align: center;
-`;
-
-const MobileHeroH2 = styled.h2`
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.54;
-  letter-spacing: -0.3px;
-  margin: 16px auto 0;
-  max-width: 600px;
-  text-align: center;
-`;
-
-const MobileHeroCtaDiv = styled.div`
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  margin-top: 24px;
-  width: 100%;
-`;
-
-const MobileHeroLink = styled.a`
-  background: var(--color-primary);
-  border: 0;
-  color: var(--color-secondary);
-  cursor: pointer;
-  font-size: 16px;
-  padding: 0 24px;
+const Paragraph = styled.p`
   position: relative;
-  transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
-  white-space: nowrap;
-  border-radius: 24px;
-  height: 40px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  line-height: 40px;
+  white-space: pre;
+  display: inline;
+  letter-spacing: 0;
+  // color: rgb(167, 169, 172);
+  color: #fff;
+  font-size: 14px;
+  line-height: 20px;
 
-  &:hover {
-    background: var(--brand-blue);
-    color: #fff;
+  @media (min-width: 768px) {
+    display: block;
+    right: 8px;
+    font-size: 16px;
+    line-height: 24px;
   }
-`;
-
-const Video = styled.video``;
+`
 
 const Slider = () => {
   return (
     <Homepage>
       <Hero>
         <Layout>
-          <Asset>
+          {/* <Asset>
             <Figure>
               <AssetImage>
                 <Image src="https://www.datocms-assets.com/53643/1675749803-landing-hero-vail-poster.jpeg" />
               </AssetImage>
             </Figure>
             <Header>
-              <Heading>Reignite your happy place.</Heading>
+              <Heading>Find your happy place.</Heading>
               <SubHeading>
-                Share a home with inspiring views, modern
-                workstations, restful beds, hotel-grade cleaning and 24/7
-                concierge service. It's a vacation home, but better.
+                Share a home with inspiring views, dorm with modern workstations, and refreshing experiences. It's a getaway, but better.
               </SubHeading>
               <Action>
                 <LinkA>Get the experience</LinkA>
               </Action>
+              <Flex>
+                <JustifyCenter>
+                  <SubHeadingUserCount>
+                    <RelativeFlex>
+                      <PhotosWrapper>
+                        <RoundPfp>
+                          <RoundPfpImage src="https://www.wander.com/_next/image?url=https%3A%2F%2Fwww.datocms-assets.com%2F53643%2F1652291699-fp8hbvxr_400x400.jpeg&w=32&q=75" />
+                        </RoundPfp>
+                        <RoundPfp>
+                          <RoundPfpImage src="https://www.wander.com/_next/image?url=https%3A%2F%2Fwww.datocms-assets.com%2F53643%2F1653407396-darryl-b.png&w=32&q=75" />
+                        </RoundPfp>
+                        <RoundPfp>
+                          <RoundPfpImage src="https://www.wander.com/_next/image?url=https%3A%2F%2Fwww.datocms-assets.com%2F53643%2F1652291124-judya.jpeg&w=32&q=75" />
+                        </RoundPfp>
+                        <RoundPfp>
+                          <RoundPfpImage src="https://www.wander.com/_next/image?url=https%3A%2F%2Fwww.datocms-assets.com%2F53643%2F1652291173-ftz3l5bo_400x400.jpeg&w=32&q=75" />
+                        </RoundPfp>
+                        <RoundPfp>
+                          <RoundPfpImage src="https://www.wander.com/_next/image?url=https%3A%2F%2Fwww.datocms-assets.com%2F53643%2F1653407295-novaks.png&w=32&q=75" />
+                        </RoundPfp>
+                        <RoundPfp>
+                          <RoundPfpImage src="https://www.wander.com/_next/image?url=https%3A%2F%2Fwww.datocms-assets.com%2F53643%2F1653407231-garrett.png&w=32&q=75" />
+                        </RoundPfp>
+                        <RoundPfp>
+                          <RoundPfpImage src="https://www.wander.com/_next/image?url=https%3A%2F%2Fwww.datocms-assets.com%2F53643%2F1653407093-joshkohn.jpeg&w=32&q=75" />
+                        </RoundPfp>
+                      </PhotosWrapper>
+                      <PhotosWrapper1>
+                        <RoundPfp1>
+                          <RoundPfp1Image src="https://www.wander.com/_next/image?url=https%3A%2F%2Fwww.datocms-assets.com%2F53643%2F1652291699-fp8hbvxr_400x400.jpeg&w=32&q=75" />
+                        </RoundPfp1>
+                        <RoundPfp1>
+                          <RoundPfp1Image src="https://www.wander.com/_next/image?url=https%3A%2F%2Fwww.datocms-assets.com%2F53643%2F1653407396-darryl-b.png&w=32&q=75" />
+                        </RoundPfp1>
+                        <RoundPfp1>
+                          <RoundPfp1Image src="https://www.wander.com/_next/image?url=https%3A%2F%2Fwww.datocms-assets.com%2F53643%2F1652291124-judya.jpeg&w=32&q=75" />
+                        </RoundPfp1>
+                      </PhotosWrapper1>
+                      <Paragraph>Join 115 Cohomies and counting...</Paragraph>
+                    </RelativeFlex>
+                  </SubHeadingUserCount>
+                </JustifyCenter>
+              </Flex>
             </Header>
-          </Asset>
+          </Asset> */}
+          <AssetVideo>
+            <VideoHolder>
+              <video style={{objectFit: "cover", maxWidth: "100%"}} src={AshevilleMeadows} crossOrigin="anonymous" width="100%" height="100%" muted playsInline loop autoPlay />
+            </VideoHolder>
+            <Header>
+              <Heading>Find your happy place.</Heading>
+              <SubHeading>
+                Share a home with inspiring views, dorm with modern workstations, and refreshing experiences. It's a shared space, but better.
+              </SubHeading>
+              <Action>
+                <LinkA>Get the experience</LinkA>
+              </Action>
+              <Flex>
+                <JustifyCenter>
+                  <SubHeadingUserCount>
+                    <RelativeFlex>
+                      <PhotosWrapper>
+                        <RoundPfp>
+                          <RoundPfpImage src="https://www.wander.com/_next/image?url=https%3A%2F%2Fwww.datocms-assets.com%2F53643%2F1652291699-fp8hbvxr_400x400.jpeg&w=32&q=75" />
+                        </RoundPfp>
+                        <RoundPfp>
+                          <RoundPfpImage src="https://www.wander.com/_next/image?url=https%3A%2F%2Fwww.datocms-assets.com%2F53643%2F1653407396-darryl-b.png&w=32&q=75" />
+                        </RoundPfp>
+                        <RoundPfp>
+                          <RoundPfpImage src="https://www.wander.com/_next/image?url=https%3A%2F%2Fwww.datocms-assets.com%2F53643%2F1652291124-judya.jpeg&w=32&q=75" />
+                        </RoundPfp>
+                        <RoundPfp>
+                          <RoundPfpImage src="https://www.wander.com/_next/image?url=https%3A%2F%2Fwww.datocms-assets.com%2F53643%2F1652291173-ftz3l5bo_400x400.jpeg&w=32&q=75" />
+                        </RoundPfp>
+                        <RoundPfp>
+                          <RoundPfpImage src="https://www.wander.com/_next/image?url=https%3A%2F%2Fwww.datocms-assets.com%2F53643%2F1653407295-novaks.png&w=32&q=75" />
+                        </RoundPfp>
+                        <RoundPfp>
+                          <RoundPfpImage src="https://www.wander.com/_next/image?url=https%3A%2F%2Fwww.datocms-assets.com%2F53643%2F1653407231-garrett.png&w=32&q=75" />
+                        </RoundPfp>
+                        <RoundPfp>
+                          <RoundPfpImage src="https://www.wander.com/_next/image?url=https%3A%2F%2Fwww.datocms-assets.com%2F53643%2F1653407093-joshkohn.jpeg&w=32&q=75" />
+                        </RoundPfp>
+                      </PhotosWrapper>
+                      <PhotosWrapper1>
+                        <RoundPfp1>
+                          <RoundPfp1Image src="https://www.wander.com/_next/image?url=https%3A%2F%2Fwww.datocms-assets.com%2F53643%2F1652291699-fp8hbvxr_400x400.jpeg&w=32&q=75" />
+                        </RoundPfp1>
+                        <RoundPfp1>
+                          <RoundPfp1Image src="https://www.wander.com/_next/image?url=https%3A%2F%2Fwww.datocms-assets.com%2F53643%2F1653407396-darryl-b.png&w=32&q=75" />
+                        </RoundPfp1>
+                        <RoundPfp1>
+                          <RoundPfp1Image src="https://www.wander.com/_next/image?url=https%3A%2F%2Fwww.datocms-assets.com%2F53643%2F1652291124-judya.jpeg&w=32&q=75" />
+                        </RoundPfp1>
+                      </PhotosWrapper1>
+                      <Paragraph>Join 115 Cohomies and counting...</Paragraph>
+                    </RelativeFlex>
+                  </SubHeadingUserCount>
+                </JustifyCenter>
+              </Flex>
+            </Header>
+          </AssetVideo>
         </Layout>
       </Hero>
     </Homepage>
