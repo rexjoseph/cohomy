@@ -70,15 +70,6 @@ const Navbar = () => {
                     </li>
                   )
                 }
-                {/* <li onClick={setOpenModal}>
-                  {
-                    currentUser ? (
-                      <a href="/profile">Rex</a>
-                    ) : (
-                      <a>Log in</a>
-                    )
-                  }
-                </li> */}
               </div>
             </ul>
           </nav>

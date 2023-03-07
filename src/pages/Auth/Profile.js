@@ -6,7 +6,7 @@ import Footer from '../../components/Footer'
 import { format } from 'date-fns'
 import './Profile.css'
 import { logout } from "../../redux/apiCalls";
-import HomeNavbar from '../../components/HomeNavbar';
+import Navbar from '../../components/Navbar';
 
 const Profile = () => {
   const user = useSelector((state) => state.user.currentUser);
@@ -14,7 +14,7 @@ const Profile = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    document.title = `${user.firstName}'s Profile — Cohomy`;
+    document.title = `${user.firstName}'s Profile`;
   });
 
   const handleLogout = (e) => {
@@ -26,7 +26,7 @@ const Profile = () => {
   return (
     <div>
       <Announcement />
-      <HomeNavbar />
+      <Navbar />
       <main>
         <div>
           <div className='user-profile-wrapper'>

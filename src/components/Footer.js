@@ -63,7 +63,7 @@ const Footer = () => {
           <FooterFlex1>
             <Ul>
               <Li>
-                &copy;{year} Cohomy, LLC
+                &copy;{year} 
               </Li>
               <Li>
                 <Href>Terms</Href>

@@ -49,7 +49,7 @@ const Announcement = ({children}) => {
   return (
     <>
       <AnnouncementContainer bgColor="000">
-        <Paragraph textColor="fff">Own a piece of our magical portfolio of homes with REIT</Paragraph>
+        <Paragraph textColor="fff">Own private rooms in Galway? Put up space with REOS</Paragraph>
       </AnnouncementContainer>
     </>
   )

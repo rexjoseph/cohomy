@@ -7,7 +7,6 @@ import { register } from "../redux/apiCalls";
 import Navbar from "../components/Navbar";
 import Announcement from "../components/Announcement";
 
-
 const Register = () => {
   const { isFetching } = useSelector((state) => state.user);
   const navigate = useNavigate();
@@ -83,7 +82,7 @@ const Register = () => {
   }
 
   useEffect(() => {
-    document.title = `Register — Cohomy`;
+    document.title = `Sign up`;
   })
 
   return (
@@ -91,19 +90,10 @@ const Register = () => {
     <Announcement />
     <Navbar />
       <div style={{marginLeft: "auto", marginRight: "auto", marginTop: "5rem", boxShadow: "none"}} className="modal-inner-1" role="dialog" arial-label="Log in">
-        <header>
-          <div className="header-left"></div>
-          <div className="header-center">
-            <h1>
-              <div className="header-center-h1div">Log in or sign up</div>
-            </h1>
-          </div>
-          <div className="header-right"></div>
-        </header>
         <div className="modal-content-wrapper">
           <div className="login-pane">
             <div className="login-pane-div1">
-              <h3>Welcome to Cohomy</h3>
+              <h3>Sign up</h3>
             </div>
             <form onSubmit={handleClick}>
               <div>
