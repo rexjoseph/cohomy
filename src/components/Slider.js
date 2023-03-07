@@ -291,7 +291,7 @@ const Slider = () => {
   useEffect(() => {
     const getUsers = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/index/all-users-count');
+        const res = await axios.get('https://coh.herokuapp.com/api/index/all-users-count');
         setUsers(res.data);
       } catch (err) {}
     };
@@ -340,7 +340,7 @@ const Slider = () => {
                       </PhotosWrapper1>
                       <Paragraph>
                         {
-                          users.length === 1 ? <>Join {users.length} Cohomie and counting...</> : <>Join {users.length} users and counting...</>
+                          users.length === 1 ? <>Join {users.length} user and counting...</> : <>Join {users.length} users and counting...</>
                         }
                       </Paragraph>
                     </RelativeFlex>
@@ -385,7 +385,7 @@ const Slider = () => {
                       </PhotosWrapper1>
                       <Paragraph>
                         {
-                          users.length === 1 ? <>Join {users.length} Cohomie and counting...</> : <>Join {users.length} users and counting...</>
+                          users.length === 1 ? <>Join {users.length} user and counting...</> : <>Join {users.length} users and counting...</>
                         }
                       </Paragraph>
                     </RelativeFlex>

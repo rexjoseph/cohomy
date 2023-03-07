@@ -38,7 +38,7 @@ const Announcement = ({children}) => {
   // useEffect(() => {
   //   const getAnnouncement = async () => {
   //     try {
-  //       const res = await axios.get("http://localhost:4000/api/announcement/all")
+  //       const res = await axios.get("https://coh.herokuapp.com/api/announcement/all")
   //       setAnnouncement(res.data)
   //       setLoading(true)
   //     } catch (err) {}
