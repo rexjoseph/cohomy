@@ -66,13 +66,19 @@ const Footer = () => {
                 &copy;{year} 
               </Li>
               <Li>
+                <Href>For Single & Divorced parents</Href>
+              </Li>
+              <Li>
+                <Href>For Van-dwellers</Href>
+              </Li>
+              <Li>
+                <Href>For Students</Href>
+              </Li>
+              <Li>
                 <Href>Terms</Href>
               </Li>
               <Li>
                 <Href>Privacy</Href>
-              </Li>
-              <Li>
-                <Href>For Students</Href>
               </Li>
               <Li>
                 <Href>Contact</Href>
