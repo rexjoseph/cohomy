@@ -5,6 +5,10 @@ const Wrapper = styled.section`
   background: #fff;
   padding: 2rem;
   font-size: 1.3rem;
+
+  @media (max-width: 500px) {
+    padding: 2rem 0;
+  }
 `
 
 const FooterDiv = styled.footer`
@@ -26,17 +30,24 @@ const FooterFlexDiv = styled.div`
 
 const FooterFlex1 = styled.div``
 
-const FooterFlex2 = styled.div``
+const FooterFlex2 = styled.div`
+  @media (max-width: 500px) {
+    border-top: 1px solid #333;
+    padding-top: 2rem;
+    width: 100%;
+  }
+`
 
 const Ul = styled.ul`
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 2rem;
   
-  @media (max-width: 768px) {
-    flex-direction: column;
-  }
+  // @media (max-width: 768px) {
+  //   flex-direction: column;
+  // }
 `
 
 const Li = styled.li``
@@ -63,13 +74,10 @@ const Footer = () => {
           <FooterFlex1>
             <Ul>
               <Li>
-                &copy;{year} 
+                &copy;{year}&nbsp;Coh
               </Li>
               <Li>
                 <Href>For Single & Divorced parents</Href>
-              </Li>
-              <Li>
-                <Href>For Van-dwellers</Href>
               </Li>
               <Li>
                 <Href>For Students</Href>

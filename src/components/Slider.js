@@ -97,6 +97,8 @@ const Header = styled.header`
   top: 0;
   height: 100%;
   width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 1;
 `;
 
 const Heading = styled.h1`
