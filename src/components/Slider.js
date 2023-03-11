@@ -358,7 +358,7 @@ const Slider = () => {
             <Header>
               <Heading>Co-habit your happy place.</Heading>
               <SubHeading>
-                Share a home with inspiring views, private rooms with modern workstations, and refreshing experiences. It's a shared space, but better.
+                Share a home with inspiring views, private rooms with modern workstations, and unique refreshing experiences. It's a shared space, but better.
               </SubHeading>
               <Action>
                 <LinkA href="/sign-up">Get the experience</LinkA>

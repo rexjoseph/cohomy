@@ -95,26 +95,23 @@ const Register = () => {
             <div className="login-pane-div1">
               <h3>Sign up</h3>
             </div>
-            <form onSubmit={handleClick}>
-              <div>
-                {
-                  inputs.map(input => (
-                    <FormInput
-                      key={input.id}
-                      {...input}
-                      value={values[input.name]}
-                      onChange={handleChange}
-                    />
-                  )
-                )}
-               
-              </div>
-              <div className="login-button">
-                <button disabled={isFetching}>
-                  <span>Continue</span>
-                </button>
-              </div>
-            </form>
+            <div className="registerFormDiv">
+              <form className="registerForm" onSubmit={handleClick}>
+                {inputs.map(input => (
+                  <FormInput
+                    key={input.id}
+                    {...input}
+                    value={values[input.name]}
+                    onChange={handleChange}  
+                  />
+                ))}
+                <div className="login-button">
+                  <button disabled={isFetching}>
+                    <span>Continue</span>
+                  </button>
+                </div>
+              </form>
+            </div>
             <div className="auth-form-divider">
               <div className="auth-form-divider-div">or</div>
             </div>

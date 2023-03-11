@@ -8,6 +8,7 @@ const Wrapper = styled.section`
 
   @media (max-width: 500px) {
     padding: 2rem 0;
+    font-size: 1.2rem;
   }
 `
 
@@ -32,7 +33,7 @@ const FooterFlex1 = styled.div``
 
 const FooterFlex2 = styled.div`
   @media (max-width: 500px) {
-    border-top: 1px solid #333;
+    border-top: 1px solid rgb(0 0 0 / 14%);
     padding-top: 2rem;
     width: 100%;
   }
@@ -83,7 +84,7 @@ const Footer = () => {
                 <Href>For Students</Href>
               </Li>
               <Li>
-                <Href>Terms</Href>
+                <Href href="/terms">Terms</Href>
               </Li>
               <Li>
                 <Href>Privacy</Href>

@@ -41,50 +41,40 @@ const Login = () => {
             <div className="login-pane-div1">
               <h3>Sign in</h3>
             </div>
-            <form onSubmit={handleClick}>
-              <div>
-                <div className="login-form-div">
-                  <label>
-                    <div className="login-label-1">
-                      <div className="login-label-1-content">Email</div>
-                    </div>
-                    <div>
-                      <div className="login-label-1-inputdiv">
-                        <input
-                          type="email"
-                          placeholder="Email"
-                          required
-                          onChange={(e) => setEmail(e.target.value)}
-                        />
-                      </div>
-                    </div>
+            <div className="registerFormDiv">
+              <form className="registerForm" onSubmit={handleClick}>
+                <div className="inputDiv">
+                  <label className="registerFormLabel" htmlFor="email">
+                    Email
                   </label>
+                  <input
+                    className="registerFormInput"
+                    type="email"
+                    placeholder="Email"
+                    required
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
                 </div>
-                <div className="login-form-div">
-                  <label>
-                    <div className="login-label-1">
-                      <div className="login-label-1-content">Password</div>
-                    </div>
-                    <div>
-                      <div className="login-label-1-inputdiv">
-                        <input
-                          type="password"
-                          placeholder="Password"
-                          required
-                          onChange={(e) => setPassword(e.target.value)}
-                        />
-                      </div>
-                    </div>
+                <div className="inputDiv">
+                  <label className="registerFormLabel" htmlFor="email">
+                    Password
                   </label>
+                  <input
+                    className="registerFormInput"
+                    type="password"
+                    placeholder="Password"
+                    required
+                    onChange={(e) => setPassword(e.target.value)}
+                  />
                 </div>
-              </div>
-              <div className="login-button">
-                <button disabled={isFetching}>
-                  <span>Continue</span>
-                </button>
-                {error && <>Invalid login credentials</>}
-              </div>
-            </form>
+                <div className="login-button">
+                  <button disabled={isFetching}>
+                    <span>Continue</span>
+                  </button>
+                  {error && <>Invalid login credentials</>}
+                </div>
+              </form>
+            </div>
             <div className="auth-form-divider">
               <div className="auth-form-divider-div">or</div>
             </div>

@@ -10,18 +10,19 @@ const FormInput = (props) => {
   };
 
   return (
-    <div className="login-form-div">
-      <label>
-        <div className="login-label-1">
-          <div className="login-label-1-content">{label}</div>
-        </div>
-        <div>
-          <div className="login-label-1-inputdiv">
-            <input { ...inputProps } onChange={onChange} onBlur={handleFocus} onFocus={() => inputProps.name === 'confirmPassword' && setFocused(true)} focused={focused.toString()} />
-          </div>
-        </div>
+    <div className="inputDiv">
+      <label className="registerFormLabel" htmlFor="firstName">
+        {label}
       </label>
-      {/* <span>{errorMessage}</span> */}
+      <input
+        {...inputProps}
+        className="registerFormInput"
+        onChange={onChange}
+        onBlur={handleFocus}
+        onFocus={() => inputProps.name === "confirmPassword" && setFocused(true)}
+        focused={focused.toString()}
+      />
+      <span className="check-errors">{errorMessage}</span>
     </div>
   );
 };

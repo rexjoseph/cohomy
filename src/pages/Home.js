@@ -9,7 +9,7 @@ const Home = () => {
   const [openModal, setOpenModal] = useState(false);
   
   useEffect(() => {
-    document.title = `Reignite your happy place`
+    document.title = `Co-habit your happy place`
   }, [])
   
   return (

@@ -6,6 +6,7 @@ import { useSelector } from 'react-redux'
 import Login from './pages/Login'
 import Profile from './pages/Auth/Profile'
 import NotFound from './pages/NotFound'
+import Terms from './pages/Terms'
 
 const App = () => {
   const user = useSelector(state => state.user.currentUser);
@@ -15,6 +16,7 @@ const App = () => {
       <Route path="/sign-up" element={ user ? <Navigate to="/profile" /> : <Register />} />
       <Route path="/sign-in" element={ user ? <Navigate to="/profile" /> : <Login />} />
       <Route path="/profile" element= { user ? <Profile /> : <Navigate to="/login" /> } />
+      <Route path="/terms" element={<Terms />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   )
