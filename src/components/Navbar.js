@@ -51,13 +51,13 @@ const Navbar = () => {
               </div>
               <div className="desktop-nav__flex2">
                 <li>
-                  <a>Products</a>
+                  <a href='/products'>Products</a>
                 </li>
                 <li>
-                  <a>Experiences</a>
+                  <a href='/experiences'>Experiences</a>
                 </li>
                 <li>
-                  <a>About</a>
+                  <a href='/about-us'>About</a>
                 </li>
                 {
                   currentUser ? (

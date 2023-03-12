@@ -67,6 +67,7 @@ const Profile = () => {
                         onChange={(e) => setFile(e.target.files[0])} 
                         accept=".png, .jpg, .jpeg"
                         placeholder='Update photo'
+                        required
                         />
                         <div className='pfp-submit-btn'>
                           <button type="submit">Update photo</button>

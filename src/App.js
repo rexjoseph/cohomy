@@ -7,6 +7,14 @@ import Login from './pages/Login'
 import Profile from './pages/Auth/Profile'
 import NotFound from './pages/NotFound'
 import Terms from './pages/Terms'
+import About from './pages/About'
+import Products from './pages/Products'
+import Experiences from './pages/Experiences'
+import Contact from './pages/Contact'
+import Privacy from './pages/Privacy'
+import SDP from './pages/SDP'
+import Students from './pages/Students'
+import SupportResources from './pages/SupportResources'
 
 const App = () => {
   const user = useSelector(state => state.user.currentUser);
@@ -16,7 +24,15 @@ const App = () => {
       <Route path="/sign-up" element={ user ? <Navigate to="/profile" /> : <Register />} />
       <Route path="/sign-in" element={ user ? <Navigate to="/profile" /> : <Login />} />
       <Route path="/profile" element= { user ? <Profile /> : <Navigate to="/login" /> } />
+      <Route path="products" element={<Products />} />
+      <Route path="experiences" element={<Experiences />} />
+      <Route path="/for-sdp" element={<SDP />} />
+      <Route path="/for-students" element={<Students />} />
+      <Route path="/about-us" element={<About />} />
       <Route path="/terms" element={<Terms />} />
+      <Route path="/contact" element={<Contact />} />
+      <Route path="/privacy" element={<Privacy />} />
+      <Route path="/support-resources" element={<SupportResources />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   )

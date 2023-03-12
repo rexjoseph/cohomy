@@ -78,19 +78,19 @@ const Footer = () => {
                 &copy;{year}&nbsp;Coh
               </Li>
               <Li>
-                <Href>For Single & Divorced parents</Href>
+                <Href href='/for-sdp'>For Single & Divorced parents</Href>
               </Li>
               <Li>
-                <Href>For Students</Href>
+                <Href href='/for-students'>For Students</Href>
               </Li>
               <Li>
                 <Href href="/terms">Terms</Href>
               </Li>
               <Li>
-                <Href>Privacy</Href>
+                <Href href='/privacy'>Privacy</Href>
               </Li>
               <Li>
-                <Href>Contact</Href>
+                <Href href='/contact'>Contact</Href>
               </Li>
             </Ul>
           </FooterFlex1>
@@ -105,7 +105,7 @@ const Footer = () => {
                 </Bspan>
               </Li>
               <Li>
-                <Href>
+                <Href href='/support-resources'>
                   <Bspan>Support & Resources</Bspan>
                 </Href>
               </Li>

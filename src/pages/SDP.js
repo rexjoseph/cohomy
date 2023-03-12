@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
 
-const Contact = () => {
+const SDP = () => {
   return (
     <>
       <Navbar />
@@ -9,4 +9,4 @@ const Contact = () => {
   )
 }
 
-export default Contact
+export default SDP
