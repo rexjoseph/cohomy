@@ -144,7 +144,7 @@ const Terms = () => {
                         <Div>
                           <ContentP>Thank you for using Coh!</ContentP>
                           <ContentP>These Terms of Service("<b>Terms</b>") are a binding legal agreement between you and Coh that govern your right to use the website, and other offerings from Coh (collectively, the "<b>Coh Platform</b>"). When used in these Terms, "<b>Coh,</b>" "<b>we,</b>" or "<b>our</b>" refers to the Coh entity with whom you are contracting.</ContentP>
-                          <ContentP>The Coh Platform offers an online venue that enables users (“<b>Members</b>”) to publish, offer, search for, and book services. Members who publish and offer services are “<b>Natives</b>” and Members who search for, book, or use services are “<b>Explorers</b>.” Natives offer accommodations (“<b>Accommodations</b>”), activities, and events (“<b>Experiences</b>”), and a variety of travel and other services (collectively, “<b>Native Services</b>,” and each Native Service offering, a “<b>Listing</b>”). You must register an account to access and use many features of the Coh Platform, and must keep your account information accurate. As the provider of the Coh Platform, Coh does not own, control, offer or manage any Listings or Native Services. Coh is not a party to the contracts entered into directly between Natives and Explorers, nor is Coh a real estate broker, travel agency,&nbsp;or insurer. Coh is not acting as an agent in any capacity for any Member.</ContentP>
+                          <ContentP>The Coh Platform offers an online venue that enables users (“<b>Members</b>”) to publish, offer, search for, and book services. Members who publish and offer services are “<b>Natives</b>” and Members who search for, book, or use services are “<b>Explorers</b>.” Natives offer accommodations (“<b>Accommodations</b>”), activities, and events (“<b>Experiences</b>”), and a variety of other services (collectively, “<b>Native Services</b>,” and each Native Service offering, a “<b>Listing</b>”). You must register an account to access and use many features of the Coh Platform, and must keep your account information accurate. As the provider of the Coh Platform, Coh does not own, control, offer or manage any Listings or Native Services. Coh is not a party to the contracts entered into directly between Natives and Explorers, nor is Coh a real estate broker, experience agency,&nbsp;or insurer. Coh is not acting as an agent in any capacity for any Member.</ContentP>
                           <ContentP>If you are a&nbsp;Native, you are responsible for understanding and complying with all laws, rules, regulations and contracts with third parties that apply to your Native Services.</ContentP>
                           <ContentP></ContentP>
                         </Div>
@@ -162,7 +162,7 @@ const Terms = () => {
                   Get help with your bookings, experiences, account and more.
                 </SideBarDivContent>
                 <SideBarLink href="/sign-in">
-                  Log in or sign up
+                  Sign in or sign up
                 </SideBarLink>
               </SideBarDivOne>
             </SideBarDiv>

@@ -52,7 +52,7 @@
 }
 
 .up-33-1 {
-  display: none;
+  display: block;
   margin-left: 0px;
   margin-right: auto;
   border: 1px solid #dddddd;
@@ -62,7 +62,6 @@
 }
 
 .up-33-2 {
-  width: 128px;
   margin: auto;
   margin-bottom: 32px;
 }
@@ -106,6 +105,25 @@
 
 .up-33-2changepfp p {
   font-size: 13px;
+}
+
+.up-33-2changepfp .pfp-uploader {
+  font-size: 13px;
+  font-family: inherit;
+}
+
+.pfp-submit-btn {
+  margin: 2rem 0;
+}
+
+.pfp-submit-btn button {
+  font-size: 13px;
+  font-family: inherit;
+  border: none;
+  outline: none;
+  background: none;
+  font-weight: 300;
+  cursor: pointer;
 }
 
 @media (min-width: 1128px) {

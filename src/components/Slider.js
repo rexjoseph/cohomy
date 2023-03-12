@@ -293,7 +293,7 @@ const Slider = () => {
   useEffect(() => {
     const getUsers = async () => {
       try {
-        const res = await axios.get('https://coh.herokuapp.com/api/index/all-users-count');
+        const res = await axios.get('http://localhost:5000/api/index/all-users-count');
         setUsers(res.data);
       } catch (err) {}
     };
