@@ -1,11 +1,17 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
+import Announement from '../components/Announcement'
 import './About.css'
 
 const About = () => {
+  useEffect(() => {
+    document.title = `About Us | Co-habit your happy place`
+  }, [])
+
   return (
     <>
+    <Announement />
       <Navbar />
       <section className='about-section'>
         <div>
@@ -20,7 +26,7 @@ const About = () => {
               </div>
               <div className='main-about-contentarea'>
                 <p>
-                  Coh was born in 2023 when two Hosts welcomed three guests to their San Francisco home, and has since grown to over 4 million Hosts who have welcomed 1.4 billion guest arrivals in almost every country across the globe. Every day, Hosts offer unique stays and experiences that make it possible for guests to connect with communities in a more authentic way.
+                  Coh was born in 2023 after our founder was struck by the frustrating experience of trying to find shelter while hustling (non-matching company, choppy WiFi, unfit for work spaces, more disappointments). He knew there had to be a better way to hustle and live. There is. Every day, Natives offer unique stays and experiences that make it possible for Explorers to commit to goals, connect with family and communities in an authentic way.
                 </p>
               </div>
             </div>

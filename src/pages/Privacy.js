@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar'
 const Privacy = () => {
   return (
     <>
+      <Announcement />
       <Navbar />
     </>
   )

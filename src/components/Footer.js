@@ -90,7 +90,7 @@ const Footer = () => {
                 <Href href='/privacy'>Privacy</Href>
               </Li>
               <Li>
-                <Href href='/contact'>Contact</Href>
+                <Href href='mailto:devloperrex@gmail.com' target='_blank'>Contact</Href>
               </Li>
             </Ul>
           </FooterFlex1>
