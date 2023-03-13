@@ -77,12 +77,12 @@ const Footer = () => {
               <Li>
                 &copy;{year}&nbsp;Coh
               </Li>
-              <Li>
+              {/* <Li>
                 <Href href='/for-sdp'>For Single & Divorced parents</Href>
               </Li>
               <Li>
                 <Href href='/for-students'>For Students</Href>
-              </Li>
+              </Li> */}
               <Li>
                 <Href href="/terms">Terms</Href>
               </Li>

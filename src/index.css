@@ -83,7 +83,7 @@
 }
 
 *::selection {
-  background-color: #585858;
+  background-color: var(--color-primary);
   color: #fff;
 }
 

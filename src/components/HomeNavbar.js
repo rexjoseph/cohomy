@@ -59,7 +59,7 @@ const HomeNavbar = () => {
               </div>
               <div className="desk-nav__flex2">
                 <li>
-                  <a href="/products">Products</a>
+                  <a href="/product">Product</a>
                 </li>
                 <li>
                   <a href="/experiences">Experiences</a>

@@ -1,9 +1,10 @@
 import React from 'react'
-import ButtonDefault from '../components/ButtonDefault'
-import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
+import './Product.css'
+import ButtonDefault from '../components/ButtonDefault'
 
-const Experiences = () => {
+const Product = () => {
   return (
     <>
       <Navbar />
@@ -46,4 +47,4 @@ const Experiences = () => {
   )
 }
 
-export default Experiences
+export default Product
