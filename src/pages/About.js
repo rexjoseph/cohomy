@@ -26,7 +26,7 @@ const About = () => {
               </div>
               <div className='main-about-contentarea'>
                 <p>
-                  Coh was born in 2023 after our founder was struck by the frustrating experience of trying to find shelter while hustling (non-matching company, choppy WiFi, unfit for work spaces, more disappointments). He knew there had to be a better way to hustle and live. There is. Every day, Natives offer unique stays and experiences that make it possible for Explorers to commit to goals, connect with family and communities in an authentic way.
+                  Coh was born in 2023 after our founder was struck by the frustrating experience of trying to find shelter while hustling (non-matching company, choppy WiFi, unfit for work spaces, more disappointments). He knew there had to be a better way to hustle and live. There is. Every day, Natives offer unique stays and experiences that make it possible for Explorers to commit to goals, Cohnect with family and communities in an authentic way.
                 </p>
               </div>
             </div>

@@ -11,7 +11,7 @@ const Product = () => {
       <main className='product-main'>
         <div>
           <div className='product-setup'>
-            <h1>Connect. Pack. Go.</h1>
+            <h1>Cohnect. Pack. Go.</h1>
             <div className='product-setup-image'>
               <img src='https://hashingmartimages.mo.cloudinary.net/files/coh-product-artboard.png' />
             </div>
